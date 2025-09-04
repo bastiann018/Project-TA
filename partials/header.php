@@ -21,10 +21,10 @@
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Daerah <span class="arrow">^</span></a>
                     <div class="dropdown-content">
-                        <a href="tampilan.php">Porsea</a>
-                        <a href="#">Laguboti</a>
-                        <a href="#">Balige</a>
-                        <a href="#">Silaen</a>
+                        <a href="porsea.php">Porsea</a>
+                        <a href="laguboti.php">Laguboti</a>
+                        <a href="balige.php">Balige</a>
+                        <a href="silaen.php">Silaen</a>
                     </div>
                 </li>
                 <li><a href="kontak.php">Contact</a></li>
