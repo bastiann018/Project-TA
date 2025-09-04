@@ -2,7 +2,7 @@
 
 <div class="monitoring-page">
     <div class="location-header">
-        <h1>PORSEA</h1>
+        <h1>LAGUBOTI</h1>
         <hr>
     </div>
 
@@ -12,7 +12,7 @@
 
     <div class="main-map-container">
         <div class="map-box-monitoring">
-            MAP / PETA PORSEA
+            MAP / PETA LAGUBOTI
         </div>
     </div>
 
