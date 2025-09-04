@@ -14,12 +14,22 @@
         <div class="logo">
             Judul Ta / Logo Project
         </div>
+        
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="tampilan.php">Tampilan</a></li>
-                <li><a href="kontak.php">Kontak</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Daerah <span class="arrow">^</span></a>
+                    <div class="dropdown-content">
+                        <a href="tampilan.php">Porsea</a>
+                        <a href="#">Laguboti</a>
+                        <a href="#">Balige</a>
+                        <a href="#">Silaen</a>
+                    </div>
+                </li>
+                <li><a href="kontak.php">Contact</a></li>
             </ul>
         </nav>
+
     </header>
     <main class="container">
