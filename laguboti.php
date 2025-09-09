@@ -11,9 +11,17 @@
     </div>
 
     <div class="main-map-container">
-        <div class="map-box-monitoring">
-            MAP / PETA LAGUBOTI
-        </div>
+    <div class="map-box-monitoring">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31895.3951565261!2d99.0493693194998!3d2.333423331693304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302e01e625555555%3A0x8542385b331f4761!2sBalige%2C%20Kec.%20Balige%2C%20Toba%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1694082522421!5m2!1sid!2sid" 
+            width="100%" 
+            height="100%" 
+            style="border:0; border-radius: 10px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
     </div>
 
     <div class="data-cards-container">
