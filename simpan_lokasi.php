@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
 
-// Ambil data dari form
+// Ambil data dari fo   rm
 $device_id = $_POST['device_id'];
 $latitude  = $_POST['latitude'];
 $longitude = $_POST['longitude'];
