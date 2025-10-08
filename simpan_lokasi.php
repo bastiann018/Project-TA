@@ -22,7 +22,7 @@ $sql = "INSERT INTO devices (device_id, lat, lon, gps_source, gps_set_at)
 
 if ($conn->query($sql) === TRUE) {
     echo "Lokasi berhasil disimpan!<br>";
-    echo "Device ID: $device_id <br>";
+    echo "Device ID: $device_id <br>"; 
     echo "Latitude: $latitude <br>";
     echo "Longitude: $longitude <br>";
 } else {
