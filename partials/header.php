@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="logo">
-            Judul Ta / Logo Project
+        IoT WEATHER MONITORING
         </div>
         
         <nav>
