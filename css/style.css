@@ -181,44 +181,16 @@ hr.section-divider {
 }
 
 .features-section .feature-card {
-    /* Hapus baris 'height: 150px;' */
-    height: auto;           /* KUNCI: Membuat tinggi kartu mengikuti konten */
-    min-height: 200px;      /* Naikkan minimal tinggi ke 200px agar terlihat lebih lega */
-    
+    height: 150px;
     background: linear-gradient(to bottom, rgba(45, 60, 80, 0.5), var(--accent-teal));
     border-radius: 10px;
-    
-    /* PENTING: Gunakan column agar konten berderet ke bawah */
     display: flex;
-    flex-direction: column; 
-    
-    /* Ganti justify-content dan align-items */
-    justify-content: flex-start; /* Konten dimulai dari atas kartu */
-    align-items: flex-start; /* Konten rata kiri di dalam kartu (Lebih baik untuk teks panjang) */
-    
-    text-align: left; /* Teks juga rata kiri */
-    padding: 20px; /* Tambahkan padding agar lebih lega */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
     font-weight: 500;
     color: var(--text-secondary);
-} 
-
-/* Tambahkan style untuk membedakan judul (agar lebih rapi) */
-.features-section .feature-card h3 {
-    color: var(--logo-color); /* Warna emas pucat untuk judul kartu */
-    font-size: 1.1em;
-    font-weight: 700;
-    margin-bottom: 5px; /* Jarak antara judul dan deskripsi */
-    text-align: center;
-    width: 100%;
-}
-
-.features-section {
-    display: grid;
-    /* Pastikan ada ruang yang cukup. */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 30px; 
-    /* Tambahkan ini jika tulisanmu sangat panjang, agar teks tidak terlalu menumpuk */
-    /* width: 100%; */
 }
 
 /* =================================================================== */
