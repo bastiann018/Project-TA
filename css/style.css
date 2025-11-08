@@ -1,16 +1,20 @@
-/* Variabel Warna & Font Dasar (Tema Desain Baru) */
+/* ===================================================== */
+/* Variabel Warna & Font Dasar (Tema Desain Baru)        */
+/* ===================================================== */
 :root {
     --bg-dark: #0d1a26;
     --header-bg: #0a182e;
-    --logo-color: #f0e68c; /* Warna emas pucat untuk logo */
+    --logo-color: #f0e68c;
     --accent-teal: #28a7a7;
     --text-color: #ffffff;
     --text-secondary: #cccccc;
-    --nav-bg: #d9e2ec;
-    --nav-text: #0a182e;
+    --nav-bg: #132a45;
+    --nav-text: #ffffff;
 }
 
-/* Reset dan Body Style Dasar */
+/* ===================================================== */
+/* Reset dan Body Style Dasar                            */
+/* ===================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -27,12 +31,12 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px 20px 20px; 
+    padding: 0 20px 20px 20px;
 }
 
-/* ======================================== */
-/* Header & Navigasi                      */
-/* ======================================== */
+/* ===================================================== */
+/* Header & Navigasi                                    */
+/* ===================================================== */
 header {
     display: flex;
     justify-content: space-between;
@@ -40,98 +44,151 @@ header {
     padding: 15px 40px;
     background-color: var(--header-bg);
     width: 100%;
+    position: relative;
+    z-index: 10;
+    border-bottom: 2px solid rgba(40, 167, 167, 0.4);
 }
 
 header .logo {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: 600;
     color: var(--logo-color);
+    letter-spacing: 0.5px;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    align-items: center; /* Menjaga item navigasi tetap sejajar */
+    align-items: center;
     gap: 15px;
 }
 
-header nav a {
+header nav a,
+.dropbtn {
     text-decoration: none;
     color: var(--nav-text);
     font-weight: 600;
     padding: 8px 15px;
     background-color: var(--nav-bg);
-    border-radius: 5px;
+    border-radius: 6px;
     transition: all 0.3s ease;
-    display: inline-block; /* Menjamin padding dan properti lain bekerja baik */
+    display: inline-block;
+    cursor: pointer;
 }
 
-header nav a:hover {
-    opacity: 0.8;
+header nav a:hover,
+.dropbtn:hover {
+    background-color: var(--accent-teal);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(40, 167, 167, 0.4);
 }
 
-/* --- Style untuk Dropdown Menu --- */
+/* ===================================================== */
+/* Dropdown Menu                                         */
+/* ===================================================== */
 .dropdown {
     position: relative;
 }
 
-.dropbtn .arrow {
-    display: inline-block;
+.dropbtn {
+    background: var(--nav-bg);
+    border: none;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.arrow {
     transition: transform 0.3s ease;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #d9e2ec; 
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 5px;
-    margin-top: 10px; 
+    top: 45px;
+    left: 0;
+    background-color: rgba(8, 20, 33, 0.97);
+    min-width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 1px solid rgba(40, 167, 167, 0.3);
+    animation: dropdownFade 0.3s ease;
 }
 
-.dropdown-content a {
-    padding: 12px 16px;
-    text-align: left;
-    /* Menghapus override style dari 'header nav a' */
-    background-color: transparent; 
-    border-radius: 0;
-    width: 100%; /* Memastikan link memenuhi lebar dropdown */
-}
-
-.dropdown-content a:hover {
-    background-color: rgba(10, 24, 46, 0.1);
-    opacity: 1; /* Reset opacity agar tidak transparan saat hover */
-}
-
-.dropdown:hover .dropdown-content {
+.dropdown-content.show {
     display: block;
 }
 
-.dropdown:hover .dropbtn .arrow {
-    transform: rotate(180deg);
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.2s ease;
 }
 
-/* ======================================== */
-/* Style untuk Halaman Utama (index.php)  */
-/* ======================================== */
+.dropdown-content a:hover {
+    background-color: var(--accent-teal);
+    color: #fff;
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================================== */
+/* Responsif Navbar                                      */
+/* ===================================================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header nav a,
+    .dropbtn {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+}
+
+/* ===================================================== */
+/* Halaman Utama (index.php)                             */
+/* ===================================================== */
 .main-layout {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .top-section {
     display: flex;
     gap: 40px;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .project-intro {
     flex: 1;
+    min-width: 300px;
 }
 
 .project-intro h1 {
-    font-size: 2.8em;
+    font-size: 2.6em;
     font-weight: 600;
 }
 
@@ -144,7 +201,7 @@ hr.title-divider {
 }
 
 .project-intro p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: var(--text-secondary);
 }
 
@@ -163,8 +220,9 @@ hr.title-divider {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 600;
+    text-align: center;
 }
 
 hr.section-divider {
@@ -176,11 +234,11 @@ hr.section-divider {
 
 .features-section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
 }
 
-.features-section .feature-card {
+.feature-card {
     height: 150px;
     background: linear-gradient(to bottom, rgba(45, 60, 80, 0.5), var(--accent-teal));
     border-radius: 10px;
@@ -193,12 +251,12 @@ hr.section-divider {
     color: var(--text-secondary);
 }
 
-/* =================================================================== */
-/* Style untuk Halaman Monitoring Daerah (porsea.php, dll.)          */
-/* =================================================================== */
+/* ===================================================== */
+/* Halaman Monitoring (porsea.php, dll.)                 */
+/* ===================================================== */
 .monitoring-page {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .location-header {
@@ -224,7 +282,7 @@ hr.section-divider {
 }
 
 .monitoring-title h2 {
-    font-size: 1.8em;
+    font-size: 1.7em;
     font-weight: 500;
 }
 
@@ -234,7 +292,7 @@ hr.section-divider {
 }
 
 .map-box-monitoring {
-    width: 60%;
+    width: 70%;
     height: 300px;
     background: linear-gradient(to bottom, rgba(45, 60, 80, 0.8), var(--accent-teal));
     border-radius: 10px;
@@ -249,7 +307,7 @@ hr.section-divider {
 .data-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px 100px;
+    gap: 25px 60px;
     justify-content: center;
 }
 
@@ -271,24 +329,35 @@ hr.section-divider {
     font-weight: 400;
 }
 
-/* ======================================== */
-/* Style untuk Halaman Kontak (kontak.php)  */
-/* ======================================== */
-.profile-page { 
-    margin-top: 40px; 
-    display: flex; 
-    flex-direction: column; 
-    gap: 30px; 
+/* ===================================================== */
+/* Halaman Kontak (kontak.php)                           */
+/* ===================================================== */
+.profile-page {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
-.profile-card { 
-    padding: 40px; 
-    min-height: 200px; 
-    background: var(--header-bg); 
-    border-radius: 10px; 
-    text-align: left; 
+
+.profile-card {
+    padding: 40px;
+    min-height: 200px;
+    background: var(--header-bg);
+    border-radius: 10px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.profile-card h3 { 
-    color: var(--accent-teal); 
-    font-size: 1.8em; 
-    margin-bottom: 15px; 
+
+.profile-card h3 {
+    color: var(--accent-teal);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Added hover effect for profile-card */
+.profile-card:hover {
+    background: linear-gradient(to bottom, var(--header-bg), var(--accent-teal));
+    box-shadow: 0 4px 15px rgba(40, 167, 167, 0.4);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
 }
